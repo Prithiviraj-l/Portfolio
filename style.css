@@ -1,8 +1,8 @@
 :root {
-  --bg: #18181b;
-  --fg: #fafafa;
+  --bg: #0e0e10;
+  --fg: #f9f9f9;
   --accent: #42a5f5;
-  --card: #232326;
+  --card: #1f1f23;
 }
 
 body {
@@ -10,57 +10,95 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: var(--bg);
   color: var(--fg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #0e0e10, #1a1a1a, #2c2c2c, #1a1a1a, #0e0e10);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header, footer {
   text-align: center;
-  padding: 1.5em 0;
+  padding: 2em 0;
   background: var(--card);
 }
 
 nav {
+  background: var(--card);
+  padding: 1em 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5em 2em;
-  background: var(--bg);
-}
-.profile-pic {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+  justify-content: center;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1em;
+  gap: 2em;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav a {
-  color: var(--fg);
   text-decoration: none;
-  font-weight: 600;
+  color: var(--fg);
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
 }
 
-#toggle-mode {
-  background: none;
-  border: none;
-  color: var(--fg);
-  font-size: 1.2em;
-  cursor: pointer;
+nav a::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  margin-bottom: 10px;
 }
 
 main {
   max-width: 900px;
   margin: 2em auto;
-  padding: 0 1em;
+  padding: 1em;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.4em;
+  margin-top: 1.5em;
 }
 
 .skills-grid {
@@ -72,15 +110,20 @@ h2 {
 
 .skills-grid span {
   background: var(--card);
-  border-radius: 0.3em;
+  border-radius: 0.4em;
   padding: 0.5em 1em;
   font-size: 1em;
   color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.skills-grid span:hover {
+  transform: scale(1.1);
 }
 
 .projects-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2em;
 }
 
@@ -88,18 +131,20 @@ h2 {
   background: var(--card);
   border-radius: 0.5em;
   padding: 1em;
-  box-shadow: 0 0 8px #0002;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+  box-shadow: 0 0 8px #0005;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 .project-card .tags span {
   background: var(--accent);
   color: #fff;
   margin-right: 0.5em;
-  border-radius: 0.2em;
-  padding: 0.2em 0.6em;
+  border-radius: 0.3em;
+  padding: 0.3em 0.7em;
   font-size: 0.85em;
 }
 
@@ -107,36 +152,20 @@ section {
   margin-bottom: 2.5em;
 }
 
-form {
+.contact-icons {
   display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  max-width: 400px;
+  justify-content: center;
+  gap: 1.5em;
+  font-size: 2em;
+  margin-top: 1em;
 }
 
-input, textarea {
-  font-size: 1em;
-  padding: 0.7em;
-  border-radius: 0.3em;
-  border: none;
-  background: #292935;
+.contact-icons a {
   color: var(--fg);
+  transition: transform 0.3s, color 0.3s;
 }
 
-button[type="submit"] {
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  border-radius: 0.3em;
-  padding: 0.8em 0;
-  font-size: 1.1em;
-  cursor: pointer;
-}
-
-/* Light mode, togglable via JS */
-body.light {
-  --bg: #fff;
-  --fg: #202020;
-  --accent: #2979ff;
-  --card: #f2f3f8;
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: var(--accent);
 }
