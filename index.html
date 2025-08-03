@@ -5,61 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prithiviraj | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" href="profile.jpg"/>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Prithiviraj</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+    <h1>PRITHIVIRAJ</h1>
+    <p>Developer</p>
   </header>
-
-  <section class="self">
-    <div class="container">
-      <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
-      <h2>Web Developer | App Developer</h2>
-      <p>I create responsive websites and Android apps. Passionate about clean UI and practical functionality.</p>
-    </div>
-  </section>
-
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>Hello! I’m Prithivi Raj, a web and app developer. I build user-friendly web applications and Android apps with clean code and attractive UI.</p>
-    <p>Skills: HTML, CSS, JavaScript, Java, Android Studio, Kotlin, Firebase, SQL</p>
-  </section>
-
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project">
-      <img src="project1.png" alt="Project Screenshot">
-      <div>
-        <h3>Medicine Reminder App</h3>
-        <p>Offline Android app to schedule and notify medicine doses with alarm, snooze, history, and theme features.</p>
+  <nav>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="toggle-mode">🌙</button>
+  </nav>
+  <main>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span>html</span>
+        <span>css</span>
+        <span>java script</span>
+        <span>python</span>
+        <span>basic app development</span>
+        <span>basic java</span>
+        <span>tools</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="Resume" class="container">
-    <h2>Resume</h2>
-    <a href="Prithiviraj Resume.pdf" download class="btn">Download Resume</a>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <div class="project-card">
+          <!-- <img src="project1.png" alt="Project Screenshot"> -->
+          <h3>Offline Medicine Reminder</h3>
+          <p>An Android app to manage medication offline with secure local storage using Room.</p>
+          <div class="tags"><span>Android</span><span>Kotlin</span><span>Room</span></div>
+          <a href="https://github.com/Prithiviraj-l" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:prithiviraj350g@email.com">prithiviraj350g@email.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/prithiviraj" target="_blank">linkedin.com/in/prithiviraj</a></p>
-    <p>GitHub: <a href="https://github.com/Prithiviraj-l" target="_blank">github.com/Prithiviraj-l</a></p>
-  </section>
+    <section id="blog">
+      <h2>Technical Blog</h2>
+      <ul>
+        <li><a href="#">Optimizing Gradle for Large Android Projects</a></li>
+        <li><a href="#">Best Practices in Offline-First App Design</a></li>
+      </ul>
+    </section>
 
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:prithiviraj350g@email.com">prithiviraj350g@email.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/prithiviraj" target="_blank">linkedin.com/in/prithiviraj</a></p>
+      <p>GitHub: <a href="https://github.com/Prithiviraj-l" target="_blank">github.com/Prithiviraj-l</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/prithiviraj_l" target="_blank">prithiviraj_l</a></p>
+    </section>
+  </main>
   <footer>
-    <p>&copy; 2025 Prithivi Raj. All rights reserved.</p>
+    <p>&copy; 2025 PRITHIVIRAJ</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
