@@ -5,36 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prithiviraj | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
   <link rel="icon" href="profile.jpg"/>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
+  <div class="animated-bg"></div>
+
   <header>
     <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
     <h1>PRITHIVIRAJ</h1>
     <p>Developer</p>
   </header>
+
   <nav>
     <ul>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#blog">Blog</a></li>
-      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="toggle-mode">🌙</button>
   </nav>
+
   <main>
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <span>html</span>
-        <span>css</span>
-        <span>java script</span>
-        <span>python</span>
-        <span>basic app development</span>
-        <span>basic java</span>
-        <span>tools</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Java (Basic)</span>
+        <span>App Development</span>
+        <span>VS Code / GitHub</span>
       </div>
     </section>
 
@@ -42,13 +46,18 @@
       <h2>Projects</h2>
       <div class="projects-list">
         <div class="project-card">
-          <!-- <img src="project1.png" alt="Project Screenshot"> -->
           <h3>Offline Medicine Reminder</h3>
           <p>An Android app to manage medication offline with secure local storage using Room.</p>
-          <div class="tags"><span>Android</span><span>Kotlin</span><span>Room</span></div>
+          <div class="tags"><span>Android</span><span>Kotlin</span><span>Room</span></div><br>
           <a href="https://github.com/Prithiviraj-l" target="_blank">GitHub</a>
         </div>
       </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>Bachelor of Computer Science</p>
+      <p>E S Arts and Science College (Co-Ed), Villupuram</p>
     </section>
 
     <section id="blog">
@@ -61,12 +70,15 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:prithiviraj350g@email.com">prithiviraj350g@email.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/prithiviraj" target="_blank">linkedin.com/in/prithiviraj</a></p>
-      <p>GitHub: <a href="https://github.com/Prithiviraj-l" target="_blank">github.com/Prithiviraj-l</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/prithiviraj_l" target="_blank">prithiviraj_l</a></p>
+      <div class="contact-icons">
+        <a href="mailto:prithiviraj350g@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/prithiviraj" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Prithiviraj-l" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/prithiviraj_l" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 PRITHIVIRAJ</p>
   </footer>
